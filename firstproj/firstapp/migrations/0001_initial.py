@@ -14,11 +14,32 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Blog',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=200)),
-                ('writer', models.CharField(max_length=100)),
-                ('pub_date', models.DateTimeField()),
-                ('body', models.TextField()),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('Name', models.CharField(max_length=100)),
+                ('Age', models.IntegerField()),
+                ('Major', models.CharField(max_length=20)),
+                ('In_Dormitory', models.BooleanField()),
+                ('MBTI', models.CharField(max_length=10)),
+                ('Hobby', models.CharField(max_length=100)),
+                ('Nickname', models.CharField(max_length=100)),
+                ('Favorite_Food', models.TextField()),
             ],
         ),
+
+        migrations.CreateModel(
+            name='Team',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('Name', models.CharField(max_length=100)),
+                ('Age', models.IntegerField()),
+                ('Major', models.CharField(max_length=20)),
+                ('In_Dormitory', models.BooleanField()),
+                ('MBTI', models.CharField(max_length=10)),
+                ('Hobby', models.CharField(max_length=100)),
+                ('Nickname', models.CharField(max_length=100)),
+                ('Favorite_Food', models.TextField()),
+            ],
+        )
     ]
