@@ -1,3 +1,41 @@
 {% load static %}
 
-<h1> Hello world </h1>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(221, 221, 240);
+        }
+
+        div {
+            background-color: rgb(241, 185, 185);
+            color: rgb(94, 98, 102);
+            width: 400px;
+            border: 2px solid lightslategray;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1 style="">TEAM BLOG PROJECT</h1>
+    <br>
+
+    <div class="container">
+        {% for Team in blogs %}
+        <div>
+            <h3>{{Team.Name}}</h3>
+            <p>나이 : {{Team.Age}}</p>
+            <p>전공 : {{Team.Major}}</p>
+            <p>MBTI : {{Team.MBTI}}</p>
+            <p>취미 : {{Team.Hobby}}</p>
+            <p>별명 : {{Team.Nickname}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
